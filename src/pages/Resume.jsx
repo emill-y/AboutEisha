@@ -96,7 +96,7 @@ const skills = {
 
 const leadership = [
   'TEDx Menlo — Co-Leader; helped organize TEDx programming for 200+ attendees and contributed to event branding and marketing.',
-  'Robotics Team — TDesigned and built VEX competition robots and programmed autonomous driving systems.',
+  'Robotics Team — Designed and built VEX competition robots and programmed autonomous driving systems.',
   'Parliamentary Debate Team — Varsity debater and leader; competed at tournaments, earning a tournament championship and multiple elimination-round finishes.',
   'Art & Mural Club — Founder & Co-Leader; designed and painted community murals, including an installation for an Alzheimer’s-focused organization.',
   'South Asian Affinity Group — Co-President; helped build community around South Asian culture, traditions, and identity.',
