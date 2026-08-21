@@ -96,7 +96,7 @@ const skills = {
 
 const leadership = [
   'TEDx Menlo — Co-Leader; helped organize TEDx programming for 200+ attendees and contributed to event branding and marketing.',
-  'Robotics Team — Team Leader; designed and built VEX competition robots and programmed autonomous driving systems in C++.',
+  'Robotics Team — TDesigned and built VEX competition robots and programmed autonomous driving systems.',
   'Parliamentary Debate Team — Varsity debater and leader; competed at tournaments, earning a tournament championship and multiple elimination-round finishes.',
   'Art & Mural Club — Founder & Co-Leader; designed and painted community murals, including an installation for an Alzheimer’s-focused organization.',
   'South Asian Affinity Group — Co-President; helped build community around South Asian culture, traditions, and identity.',
@@ -115,7 +115,6 @@ const awards = [
   '$1,600 Social Entrepreneurship & Action Grant — supported STEM workshops in under-resourced Central California schools.',
   '$3,400 Koum Family & HANDs Foundation Grant — awarded for a top-three global issues pitch; funding supported a job program for underserved women through Sayodhya Home in Hyderabad.',
   '$1,000 India Philanthropy Alliance Grant — awarded through an essay competition and used to support work with American Friends of HelpAge India.',
-  '$500 SEIA Grant — supported Women in STEM programming and workshops.',
 ]
 
 export default function Resume() {
