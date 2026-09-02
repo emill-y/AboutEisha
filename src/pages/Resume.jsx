@@ -121,14 +121,6 @@ export default function Resume() {
   return (
     <PageTransition>
       <div className="max-w-4xl mx-auto px-6 py-16 flex flex-col items-center">
-        <div className="w-full flex justify-end mb-4">
-          <a
-            href="#"
-            className="clickable font-mono text-[12px] px-4 py-2 rounded-full border border-mist-2 text-graphite hover:border-rose-deep hover:text-rose-deep transition-colors"
-          >
-            ↓ download pdf
-          </a>
-        </div>
 
         <motion.div
           initial={{ opacity: 0, y: 20, rotate: -1.2 }}
