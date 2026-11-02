@@ -1,53 +1,27 @@
-# eisha yadav — personal site
+# eisha yadav — what's in my bag
 
-A multi-page personal site built with React + Vite, React Router, Framer Motion, and Tailwind CSS v4.
+Personal site built as a "what's in my bag" flat-lay. Each object in the bag opens a panel
+(projects, résumé, writing, contact, currently, fun), and a numbered index below the bag lists
+everything for quick scanning. React + Vite, React Router, Framer Motion, Tailwind CSS v4.
 
-## Design
+## Editing
 
-- **Palette**: techy-feminine-minimalist — off-white paper background, near-black ink text, muted dusty rose + soft mint accents (no purple gradients, no warm-cream/terracotta defaults).
-- **Type**: Fraunces (editorial display serif) + JetBrains Mono (technical accents, nav, labels) + Inter (body).
-- **Signature moment**: the home page is an aerial "desk" view — a cutting-mat grid background with flat-lay SVG objects (laptop, resume paper, book, phone, Smiski figurine, receipt) scattered and lightly rotated, each linking to its page.
-- **Nav**: a VS Code–style tab bar across every page, with a custom flower cursor sitewide.
+- **Copy**: `src/data/content.js` (all text: projects, résumé, posts, contact).
+- **Objects / photos**: `src/data/items.js`. Photos live in `public/bag/`. To swap one, drop in a
+  transparent PNG/WebP (1600px+ on the long edge) and update `image` + `ratio`. `desktop` /
+  `mobile` set each photo's position on the canvas.
+- Every panel has its own URL (`/projects`, `/resume`, `/writing`, `/contact`, `/currently`, `/fun`).
+- Keyboard: `1`–`6` open an item, `←`/`→` step through them, `Esc` closes.
+- The résumé panel has a print / save-as-PDF button that prints just that panel.
 
-## Getting started
+## Develop
 
 ```bash
 npm install
-npm run dev       # local dev server
-npm run build      # production build -> dist/
-npm run preview    # preview the production build
+npm run dev
+npm run build   # -> dist/
 ```
 
-Requires Node 18+.
+## Deploy
 
-## Project structure
-
-```
-src/
-  components/     TabNav, Cursor, PageTransition
-  icons/          hand-drawn SVG "flat lay" desk objects
-  data/           placeholder content (projects, blog posts, LinkedIn posts, food spots)
-  pages/          one file per route
-```
-
-## Content
-
-All copy is realistic placeholder content — swap it out in `src/data/*.js` and directly inside
-each page component (Resume.jsx has its own inline content) whenever real content is ready.
-
-## Deploying
-
-### Netlify
-1. Push this repo to GitHub.
-2. In Netlify: **Add new site → Import an existing project**, pick this repo.
-3. Build command: `npm run build`. Publish directory: `dist`.
-
-### Pushing to GitHub (from scratch)
-```bash
-git init
-git add .
-git commit -m "initial commit"
-git branch -M main
-git remote add origin https://github.com/<your-username>/<your-repo>.git
-git push -u origin main
-```
+Netlify builds from `netlify.toml` (`npm run build`, publish `dist`, SPA redirect included).
