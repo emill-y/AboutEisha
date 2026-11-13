@@ -1,18 +1,31 @@
-# eisha yadav — what's in my bag
+# eisha yadav — personal site
 
-Personal site built as a "what's in my bag" flat-lay. Each object in the bag opens a panel
-(projects, résumé, writing, contact, currently, fun), and a numbered index below the bag lists
-everything for quick scanning. React + Vite, React Router, Framer Motion, Tailwind CSS v4.
+A personal site that looks and works like VS Code. The workspace folder is **Eisha Yadav**, and each
+section of the site is a subfolder:
+
+```
+Eisha Yadav/
+  projects/    riya.md, brandmap.md, flags_of_the_world.md, mymani.md
+  resume/      resume.md, skills.json
+  writing/     four short essays
+  currently/   currently.yaml
+  fun/         hobbies.md, personality_traits.txt
+  contact/     contact.json
+  playlist.m3u what I'm listening to
+  README.md    the quick version (opens first)
+```
+
+What works: explorer, open editors, outline, search across files, tabs, breadcrumbs, line numbers,
+minimap, Markdown preview, ⌘P quick open, a terminal (`help`, `tldr`, `ls`, `open`, `cat`,
+`contact`, `playlist`), a chat panel that answers from the site's content, and a printable résumé
+(print icon on `resume.md`). Every file has its own URL, e.g. `/resume/resume.md` (short forms like
+`/resume` and `/projects` work too).
 
 ## Editing
 
-- **Copy**: `src/data/content.js` (all text: projects, résumé, posts, contact).
-- **Objects / photos**: `src/data/items.js`. Photos live in `public/bag/`. To swap one, drop in a
-  transparent PNG/WebP (1600px+ on the long edge) and update `image` + `ratio`. `desktop` /
-  `mobile` set each photo's position on the canvas.
-- Every panel has its own URL (`/projects`, `/resume`, `/writing`, `/contact`, `/currently`, `/fun`).
-- Keyboard: `1`–`6` open an item, `←`/`→` step through them, `Esc` closes.
-- The résumé panel has a print / save-as-PDF button that prints just that panel.
+- All copy: `src/data/content.js`
+- Playlist: `src/data/playlist.js`
+- How content becomes files: `src/vfs.js`
 
 ## Develop
 
@@ -21,7 +34,5 @@ npm install
 npm run dev
 npm run build   # -> dist/
 ```
-
-## Deploy
 
 Netlify builds from `netlify.toml` (`npm run build`, publish `dist`, SPA redirect included).
